@@ -2,6 +2,8 @@ package com.ecommerce.product.entity;
 
 import java.util.Date;
 
+import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -14,7 +16,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Document(collection = "Product")
 public class Product {
-
+	
+	@Id
 	private String id;
 	private String productId;
 	private String productName;
